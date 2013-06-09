@@ -1,0 +1,11 @@
+<ol>
+<% @stories.each do |story| %>
+	<li>
+		<p><%= link_to story.title, story.link %></p>
+		<small>Current Upvotes: <%= story.upvotes %></small>
+		|
+		<small>Category: <%= story.category %></small>
+		<small><%= link_to 'Comments', story %></small>
+	</li>
+<% end %>
+</ol>

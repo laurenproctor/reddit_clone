@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Reddit Clone</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<h1><%= link_to "Reddit Clone", root_path %></h1>
+		<%= form_tag 'search', method: :get do %>	
+			<%= search_field_tag :q, "", placeholder: 'Search' %>
+			<%= submit_tag "Search" %>
+		<% end %>
+
+	<% if notice %>
+		<p><%= notice %></p>
+	<% end %>
+
+<%= yield %>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+<h2><%= link_to @story.title, @story.link %></h2>
+<p>Current Upvotes: <%= @story.upvotes %></p>
+<p>Category: <%= @story.upvotes %></p>
+
+Comments: 
+<%= form_tag "" do %>
+	<div>
+		<%= text_area_tag :comment, "", placeholder: 'Enter a comment', :cols => 40, :rows => 6 %>
+	</div>
+	<%= submit_tag "Add Comment" %>
+<% end %>

@@ -2,6 +2,7 @@ RedditClone::Application.routes.draw do
   root :to => 'stories#index'
   get 'search', to: 'stories#search'
   resources :stories, only: [:new, :create, :show, :destroy]
+  resources :categories, only: [:show]
 
 
   # The priority is based upon order of creation:
